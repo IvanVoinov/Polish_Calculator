@@ -1,0 +1,12 @@
+# folder build
+build/
+
+#folder CMakeFiles
+CMakeFiles/
+
+#folder googleTest
+#googleTest/
+
+#other stuff
+CMakeLists.txt.user
+CMakeLists.txt.user.4.8-pre1
