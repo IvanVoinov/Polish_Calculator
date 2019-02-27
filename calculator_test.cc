@@ -97,42 +97,38 @@ TEST(CalculatorTest, TestCalculateOperationsWithDoubles)
     EXPECT_DOUBLE_EQ(2.5, result);
 }
 
-//TEST(CalculatorTest, TestCalculateNumericLimitsWithPlus)
-//{
-//    auto result = calculate("1.79769e+308 1.79769e+308 +");
-//    EXPECT_DOUBLE_EQ(0, result);
-//}
+TEST(CalculatorTest, TestCalculateNumericLimitsWithPlus)
+{
+    auto result = calculate("1.79769e+308 1.79769e+308 +");
+    EXPECT_DOUBLE_EQ(std::numeric_limits<double>::infinity(), result);
+}
 
-//TEST(CalculatorTest, TestCalculateNumericLimitsWithMinus1)
-//{
-//    auto result = calculate("-10 1.79769e+308 -");
-//    EXPECT_DOUBLE_EQ(0, result);
-//}
+TEST(CalculatorTest, TestCalculateNumericLimitsWithMinus1)
+{
+    auto result = calculate("-10 1.79769e+308 -");
+    EXPECT_DOUBLE_EQ(-1.7976900000000001e+308, result);
+}
 
-//TEST(CalculatorTest, TestCalculateNumericLimitsWithMinus2)
-//{
-//    auto result = calculate("1.79769e+307 1.79769e+308 -");
-//    EXPECT_DOUBLE_EQ(0, result);
-//}
+TEST(CalculatorTest, TestCalculateNumericLimitsWithMinus2)
+{
+    auto result = calculate("1.79769e+307 1.79769e+308 -");
+    EXPECT_DOUBLE_EQ(-1.617921e+308, result);
+}
 
-//TEST(CalculatorTest, TestCalculateNumericLimitsWithMultiply)
-//{
-//    auto result = calculate("1.79769e+308 1.79769e+308 *");
-//    EXPECT_DOUBLE_EQ(0, result);
-//}
+TEST(CalculatorTest, TestCalculateNumericLimitsWithMultiply)
+{
+    auto result = calculate("1.79769e+308 1.79769e+308 *");
+    EXPECT_DOUBLE_EQ(std::numeric_limits<double>::infinity(), result);
+}
 
-//TEST(CalculatorTest, TestCalculateNumericLimitsWithDivide)
-//{
-//    auto result = calculate("1 1.79769e+308 /");
-//    EXPECT_DOUBLE_EQ(0, result);
-//}
+TEST(CalculatorTest, TestCalculateNumericLimitsWithDivide)
+{
+    auto result = calculate("1 1.79769e+308 /");
+    EXPECT_DOUBLE_EQ(5.5626943466337352e-309, result);
+}
 
+//Uncomment if you need in Debug.
 //int main()
 //{
-//    double maxVal = std::numeric_limits<double>::max();
-//    std::cout << maxVal << std::endl;
-//    double val = 1.79769e+1 + 1;
-//    std::cout << val << std::endl;
-//    std::cout << calculate("2a 4 +") << std::endl;
-//    return 0;
+//    return RUN_ALL_TESTS();
 //}

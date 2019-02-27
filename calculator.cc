@@ -38,17 +38,17 @@ void mathOperations(const char c, std::vector< double > & arr)
     if (c == '+')
     {
         result = arr[0] + arr[1];
-        std::cout << arr[0] + arr[1] << std::endl;
+        std::cout << "Result: " << arr[0] + arr[1] << std::endl;
     }
     else if (c == '-')
     {
         result = arr[0] - arr[1];
-        std::cout << arr[0] - arr[1] << std::endl;
+        std::cout << "Result: " << arr[0] - arr[1] << std::endl;
     }
     else if (c == '*')
     {
         result = arr[0] * arr[1];
-        std::cout << arr[0] * arr[1] << std::endl;
+        std::cout << "Result: " << arr[0] * arr[1] << std::endl;
     }
     else if (c == '/')
     {
@@ -61,7 +61,7 @@ void mathOperations(const char c, std::vector< double > & arr)
         else
         {
             result = arr[0] / arr[1];
-            std::cout << arr[0] / arr[1] << std::endl;
+            std::cout << "Result: " << arr[0] / arr[1] << std::endl;
         }
     }
 
