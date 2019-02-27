@@ -26,11 +26,6 @@ bool checkAditionSpaces(const std::string & str)
     return str.empty();
 }
 
-//bool checkSign(const char c)
-//{
-//    return c == '+' || c == '-'
-//}
-
 void mathOperations(const char c, std::vector< double > & arr)
 {
     double result = 0;
@@ -119,9 +114,8 @@ double calculate(const std::string & eval)
         else
         {
             std::cout << "Added to vector: " << std::stod(str) << std::endl;
-
             valArr.push_back(std::stod(str.c_str() ) );
-            //use separete method
+
             if (valArr.size() > VAL_ARR_SIZE)
             {
                 return INVALID_RESULT;

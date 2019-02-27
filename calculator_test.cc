@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "calculator.h"
+#include "MathOperations/MathOperationAmount.h"
 
 TEST(CalculatorTest, TestOperationSimplePlus1)
 {

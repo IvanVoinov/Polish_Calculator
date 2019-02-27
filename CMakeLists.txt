@@ -9,7 +9,12 @@ option(gtest_disable_pthreads "Disable uses of pthreads in gtest." ON)
 add_subdirectory(googletest)
 
 set(SOURCES
-    calculator.cc)
+    calculator.cc
+    MathOperations/MathOperationsBase.cpp
+    MathOperations/MathOperationAmount.cpp
+    MathOperations/MathOperationSubtraction.cpp
+    MathOperations/MathOperationMultiplication.cpp
+    MathOperations/MathOperationDivision.cpp)
 
 add_executable(calculator_test
                calculator_test.cc
